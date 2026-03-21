@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>個人履歷</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.resume {
+  display: flex;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 左側 */
+.left {
+  width: 30%;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* 右側 */
+.right {
+  width: 70%;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h3 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* 深色模式 */
+.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark .resume {
+  background-color: #2c2c2c;
+}
+
+.dark .right {
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="resume">
+
+  <!-- 左側 -->
+  <div class="left">
+    <img src="images/profile.jpg" alt="個人照片" class="profile-pic">
+    
+    <h2>洪文璿</h2>
+    <p>學生 / 求職者</p>
+
+    <div class="section">
+      <h3>聯絡資訊</h3>
+      <p>📞 0912-345-678</p>
+      <p>📧 example@email.com</p>
+    </div>
+
+    <div class="section">
+      <h3>技能</h3>
+      <ul>
+        <li>HTML / CSS</li>
+        <li>JavaScript</li>
+        <li>基礎程式設計</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 右側 -->
+  <div class="right">
+    <div class="section">
+      <h3>自我介紹</h3>
+      <p>
+        我是一名積極學習的學生，對網頁設計與程式開發有興趣，喜歡挑戰新技術並提升自己能力。
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>學歷</h3>
+      <p>中興高中</p>
+    </div>
+
+    <div class="section">
+      <h3>經歷</h3>
+      <p>尚無正式工作經驗，持續學習中</p>
+    </div>
+
+    <button onclick="changeTheme()">切換主題</button>
+  </div>
+
+</div>
+
+<script>
+function changeTheme() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
