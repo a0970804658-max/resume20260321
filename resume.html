@@ -8,58 +8,69 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #e5e5e5;
 }
 
-/* 上方大圖 */
-.hero {
-  height: 300px;
-  background: url("images/photo.jpg") center/cover no-repeat;
-}
-
-/* 主卡片 */
-.resume {
+/* 整體 */
+.container {
   display: flex;
-  max-width: 900px;
-  margin: -100px auto 40px;
+  max-width: 1000px;
+  margin: 40px auto;
   background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 2;
 }
 
-/* 左側 */
-.left {
-  width: 30%;
-  background: #2c3e50;
-  color: white;
-  padding: 20px;
-  text-align: center;
+/* 左側灰色欄 */
+.sidebar {
+  width: 35%;
+  background: #d9d9d9;
+  padding: 30px 20px;
+  box-sizing: border-box;
 }
 
-/* 個人照片 */
 .profile-pic {
-  width: 120px;
-  height: 150px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-top: -80px;
-  border: 4px solid white;
+  margin-bottom: 20px;
 }
 
-/* 右側 */
-.right {
-  width: 70%;
-  padding: 20px;
+/* 左側標題 */
+.sidebar h3 {
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+/* 右側主內容 */
+.main {
+  width: 65%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* 名字 */
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.title {
+  letter-spacing: 5px;
+  margin-bottom: 30px;
 }
 
 /* 區塊 */
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-h3 {
-  border-bottom: 2px solid #ccc;
+.section h3 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid black;
   padding-bottom: 5px;
 }
 
@@ -68,48 +79,42 @@ h3 {
   background-color: #1e1e1e;
 }
 
-.dark .resume {
+.dark .container {
   background-color: #2c2c2c;
+  color: white;
 }
 
-.dark .right {
-  color: white;
+.dark .sidebar {
+  background-color: #444;
 }
 </style>
 
 </head>
 <body>
 
-<!-- 上方大圖 -->
-<div class="hero"></div>
-
-<div class="resume">
+<div class="container">
 
   <!-- 左側 -->
-  <div class="left">
-    <img src="images/photo.jpg.jpg" alt="個人照片" class="profile-pic">
-    
-    <h2>洪文璿</h2>
-    <p>學生 / 求職者</p>
+  <div class="sidebar">
+    <img src="images/photo.jpg.jpg" class="profile-pic">
 
-    <div class="section">
-      <h3>聯絡資訊</h3>
-      <p> 學號：114018045</p>
-      <p>📧 a0970804658@gmail.com</p>
-    </div>
+    <h3>聯絡資訊</h3>
+    <p>學號：114018045</p>
+    <p>📧 a0970804658@gmail.com</p>
 
-    <div class="section">
-      <h3>技能</h3>
-      <ul>
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-        <li>基礎程式設計</li>
-      </ul>
-    </div>
+    <h3>技能</h3>
+    <ul>
+      <li>HTML / CSS</li>
+      <li>JavaScript</li>
+      <li>基礎程式設計</li>
+    </ul>
   </div>
 
   <!-- 右側 -->
-  <div class="right">
+  <div class="main">
+    <div class="name">洪文璿</div>
+    <div class="title">學生 / 求職者</div>
+
     <div class="section">
       <h3>自我介紹</h3>
       <p>
